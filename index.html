@@ -3,69 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Layout</title>
+    <title>News Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
-        <h1>The Daily Scoop</h1>
-        <p>Your source for breaking news.</p>
+    <header class="main-header">
+        <h1>News Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="news-container">
-        <section class="featured-news">
-            <div class="featured-image">
-                <img src="https://picsum.photos/id/1015/800/600" alt="Featured Article Image">
-            </div>
-            <div class="featured-content">
-                <span class="category">Global Politics</span>
-                <h2 class="headline">New International Treaty Signed to Curb Climate Change</h2>
-                <p class="description">Leaders from 50 nations met yesterday to finalize a groundbreaking agreement aimed at reducing carbon emissions by 2050.</p>
-                <p class="published-time">Published on: October 26, 2023 at 10:30 AM</p>
+    <main class="container">
+        
+        <section class="category-section" id="india">
+            <h2>India News</h2>
+            <div class="news-grid">
+                
+                <article class="news-card">
+                    <img src="https://via.placeholder.com/300x200?text=India+News+1" alt="India News Image">
+                    <div class="card-content">
+                        <p class="category">India</p>
+                        <h3>Major Economic Reforms Passed</h3>
+                        <p class="time">2 hours ago</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="https://via.placeholder.com/300x200?text=India+News+2" alt="India News Image">
+                    <div class="card-content">
+                        <p class="category">India</p>
+                        <h3>Cricket Team Wins Championship</h3>
+                        <p class="time">5 hours ago</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="https://via.placeholder.com/300x200?text=India+News+3" alt="India News Image">
+                    <div class="card-content">
+                        <p class="category">India</p>
+                        <h3>New Infrastructure Project Launched</h3>
+                        <p class="time">1 day ago</p>
+                    </div>
+                </article>
+
             </div>
         </section>
 
-        <section class="smaller-articles">
-            <div class="news-card">
-                <img src="https://picsum.photos/id/1018/400/300" alt="Tech Innovation">
-                <div class="card-content">
-                    <span class="category">Technology</span>
-                    <h3 class="headline">Quantum Computing Breakthrough Promises Faster Processing</h3>
-                    <p class="description">Researchers have achieved a major milestone in stable quantum qubit manipulation.</p>
-                </div>
-            </div>
+        <section class="category-section" id="world">
+            <h2>World News</h2>
+            <div class="news-grid">
+                
+                <article class="news-card">
+                    <img src="https://via.placeholder.com/300x200?text=World+News+1" alt="World News Image">
+                    <div class="card-content">
+                        <p class="category">World</p>
+                        <h3>Global Summit Reaches Agreement</h3>
+                        <p class="time">3 hours ago</p>
+                    </div>
+                </article>
 
-            <div class="news-card">
-                <img src="https://picsum.photos/id/1025/400/300" alt="Sports Update">
-                <div class="card-content">
-                    <span class="category">Sports</span>
-                    <h3 class="headline">Local Team Clinches Championship in Thrilling Final</h3>
-                    <p class="description">The underdogs managed a spectacular comeback to win the league title.</p>
-                </div>
-            </div>
+                <article class="news-card">
+                    <img src="https://via.placeholder.com/300x200?text=World+News+2" alt="World News Image">
+                    <div class="card-content">
+                        <p class="category">World</p>
+                        <h3>Political Tensions Rise in Europe</h3>
+                        <p class="time">8 hours ago</p>
+                    </div>
+                </article>
 
-            <div class="news-card">
-                <img src="https://picsum.photos/id/1039/400/300" alt="Health News">
-                <div class="card-content">
-                    <span class="category">Health & Wellness</span>
-                    <h3 class="headline">New Study Links Diet to Improved Mental Health</h3>
-                    <p class="description">Scientists recommend increasing intake of omega-3 fatty acids for cognitive benefits.</p>
-                </div>
-            </div>
+                <article class="news-card">
+                    <img src="https://via.placeholder.com/300x200?text=World+News+3" alt="World News Image">
+                    <div class="card-content">
+                        <p class="category">World</p>
+                        <h3>Climate Change Report Released</h3>
+                        <p class="time">1 day ago</p>
+                    </div>
+                </article>
 
-            <div class="news-card">
-                <img src="https://picsum.photos/id/1041/400/300" alt="Economic Trends">
-                <div class="card-content">
-                    <span class="category">Economy</span>
-                    <h3 class="headline">Global Markets React to Interest Rate Adjustments</h3>
-                    <p class="description">Analysts predict a period of volatility as central banks continue to adjust policies.</p>
-                </div>
             </div>
         </section>
+
+        <section class="category-section" id="technology">
+            <h2>Technology News</h2>
+            <div class="news-grid">
+                
+                <article class="news-card">
+                    <img src="https://via.placeholder.com/300x200?text=Tech+News+1" alt="Technology News Image">
+                    <div class="card-content">
+                        <p class="category">Technology</p>
+                        <h3>AI Breakthrough Announced by Researchers</h3>
+                        <p class="time">4 hours ago</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="https://via.placeholder.com/300x200?text=Tech+News+2" alt="Technology News Image">
+                    <div class="card-content">
+                        <p class="category">Technology</p>
+                        <h3>New Smartphone Launched with Advanced Features</h3>
+                        <p class="time">12 hours ago</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="https://via.placeholder.com/300x200?text=Tech+News+3" alt="Technology News Image">
+                    <div class="card-content">
+                        <p class="category">Technology</p>
+                        <h3>Quantum Computing Reaches New Milestone</h3>
+                        <p class="time">2 days ago</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="category-section" id="sports">
+            <h2>Sports News</h2>
+            <div class="news-grid">
+                
+                <article class="news-card">
+                    <img src="https://via.placeholder.com/300x200?text=Sports+News+1" alt="Sports News Image">
+                    <div class="card-content">
+                        <p class="category">Sports</p>
+                        <h3>Football Team Wins League Title</h3>
+                        <p class="time">1 hour ago</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="https://via.placeholder.com/300x200?text=Sports+News+2" alt="Sports News Image">
+                    <div class="card-content">
+                        <p class="category">Sports</p>
+                        <h3>Tennis Star Breaks Grand Slam Record</h3>
+                        <p class="time">6 hours ago</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="https://via.placeholder.com/300x200?text=Sports+News+3" alt="Sports News Image">
+                    <div class="card-content">
+                        <p class="category">Sports</p>
+                        <h3>Olympics Preparations Intensify</h3>
+                        <p class="time">3 days ago</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="category-section" id="business">
+            <h2>Business News</h2>
+            <div class="news-grid">
+                
+                <article class="news-card">
+                    <img src="https://via.placeholder.com/300x200?text=Business+News+1" alt="Business News Image">
+                    <div class="card-content">
+                        <p class="category">Business</p>
+                        <h3>Stock Market Reaches All-Time High</h3>
+                        <p class="time">2 hours ago</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="https://via.placeholder.com/300x200?text=Business+News+2" alt="Business News Image">
+                    <div class="card-content">
+                        <p class="category">Business</p>
+                        <h3>New Tech Startup Secures Funding</h3>
+                        <p class="time">9 hours ago</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="https://via.placeholder.com/300x200?text=Business+News+3" alt="Business News Image">
+                    <div class="card-content">
+                        <p class="category">Business</p>
+                        <h3>Inflation Rates Stabilize Globally</h3>
+                        <p class="time">1 week ago</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
     </main>
 
-    <footer class="site-footer">
-        <p>&copy; 2023 The Daily Scoop. All rights reserved.</p>
+    <footer class="main-footer">
+        <p>&copy; 2024 News Hub. All rights reserved.</p>
     </footer>
+
 </body>
 </html>

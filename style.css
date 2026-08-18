@@ -1,181 +1,182 @@
-/* Global Reset and Base Styles */
-body {
-    font-family: 'Arial', sans-serif;
+/* General Reset and Typography */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f9;
     color: #333;
+    line-height: 1.6;
 }
 
 /* Header Styling */
-.site-header {
-    background-color: #0056b3;
+.main-header {
+    background-color: #2c3e50;
     color: white;
-    padding: 20px 0;
-    text-align: center;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.site-header h1 {
-    margin-bottom: 5px;
+.main-header h1 {
+    font-size: 1.8em;
 }
 
-/* Main Layout Container */
-.news-container {
+.main-header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-header nav ul li {
+    margin-left: 20px;
+}
+
+.main-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.main-header nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Main Container and Sections */
+.container {
     max-width: 1200px;
     margin: 30px auto;
     padding: 0 20px;
-    display: grid;
-    gap: 30px;
-    /* Default layout: Featured article spans the top, smaller articles below */
-    grid-template-areas: "featured" "small-articles";
-    grid-template-columns: 1fr;
 }
 
-/* Featured News Styling */
-.featured-news {
-    grid-area: featured;
-    background-color: #ffffff;
+.category-section {
+    margin-bottom: 50px;
+    padding: 20px 0;
+}
+
+.category-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2em;
+    border-bottom: 3px solid #3498db;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+/* News Grid Styling (Desktop View) */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* News Card Styling */
+.news-card {
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-}
-
-.featured-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-.featured-content {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-}
-
-.featured-content .category {
-    font-size: 0.9em;
-    color: #007bff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-.featured-content .headline {
-    font-size: 2.5em;
-    color: #1a1a1a;
-    margin-top: 0;
-    margin-bottom: 15px;
-    line-height: 1.2;
-}
-
-.featured-content .description {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    line-height: 1.6;
-    color: #555;
-}
-
-.featured-content .published-time {
-    font-size: 0.85em;
-    color: #888;
-    margin-top: auto;
-}
-
-/* Smaller Articles Section */
-.smaller-articles { 
-    grid-area: small-articles;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.news-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
 }
 
 .news-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .news-card img {
     width: 100%;
-    height: 200px; /* Fixed height for consistency */
+    height: auto;
+    display: block;
     object-fit: cover;
+    aspect-ratio: 3 / 2;
 }
 
 .card-content {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .card-content .category {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
     font-size: 0.8em;
-    color: #28a745;
+    font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 8px;
-}
-
-.card-content .headline {
-    font-size: 1.4em;
-    color: #333;
-    margin-top: 0;
     margin-bottom: 10px;
-    line-height: 1.3;
 }
 
-.card-content .description {
-    font-size: 1em;
-    color: #666;
-    line-height: 1.5;
+.card-content h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.card-content .time {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-top: auto;
 }
 
 /* Footer Styling */
-.site-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
+.main-footer {
+    background-color: #34495e;
     color: white;
+    text-align: center;
+    padding: 20px 0;
     margin-top: 40px;
+    width: 100%;
 }
 
-/* ==================================
-   Responsive Design (Media Queries)
-   ===================================
- */
-
-/* Medium screens (Tablets and smaller desktops) */
-@media (min-width: 768px) {
-    .news-container {
-        /* Arrange featured article next to the smaller articles on larger screens */
-        grid-template-areas: "featured small-articles";
-        grid-template-columns: 2fr 1fr;
-        gap: 40px;
+/* Mobile Responsiveness (Single Column Layout) */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
     }
 
-    .featured-news {
-        /* Ensure the featured article takes up the necessary space */
-        grid-column: 1 / 2;
+    .main-header nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .smaller-articles {
-        /* Ensure smaller articles take up the remaining space */
-        grid-column: 2 / 3;
-        grid-template-columns: repeat(2, 1fr); /* Two columns on tablet size */
+    .main-header nav ul li {
+        margin: 5px 0;
     }
-}
 
-/* Large screens (Desktops) */
-@media (min-width: 1024px) {
-    .smaller-articles {
-        /* Three columns on large desktops */
-        grid-template-columns: repeat(3, 1fr);
+    .container {
+        padding: 0 15px;
+    }
+
+    .category-section h2 {
+        font-size: 1.7em;
+        margin-bottom: 20px;
+    }
+
+    /* News grid changes to a single column on small screens */
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .news-card {
+        margin-bottom: 0; /* Ensure cards stack nicely */
     }
 }
