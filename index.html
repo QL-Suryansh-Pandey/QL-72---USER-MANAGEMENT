@@ -5,9 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live News</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for search icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>Live News</h1>
-    <script src="script.js"></script>
+    <header class="header">
+        <div class="logo">
+            <h1><a href="index.html">LIVE NEWS</a></h1>
+        </div>
+        
+        <nav class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">World</a></li>
+                <li><a href="#">India</a></li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Sports</a></li>
+            </ul>
+        </nav>
+
+        <div class="search-container">
+            <button class="search-btn" id="searchBtn">
+                <i class="fas fa-search"></i>
+            </button>
+            <input type="text" class="search-input" placeholder="Search..." id="searchInput">
+        </div>
+
+        <!-- Hamburger menu button for mobile -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <main class="main-content">
+        <!-- Main content of the website goes here -->
+        <section class="hero">
+            <h2>Welcome to Live News</h2>
+            <p>Stay updated with the latest global and local headlines.</p>
+        </section>
+    </main>
+
+    <script>
+        // Basic JavaScript for mobile menu toggle
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
